@@ -7,8 +7,6 @@ import json
 # És per evitar l"interpretació especial de caràcters d'escape (com \n o \t) i per tractar la cadena de caràcters tal com és, sense canviar-ne el contingut.
 
 # HAS DE POSAR EL DIRECTORI ON TENS ELS JSON! 
-print("SI EL JSON DE SORTIDA (fitxer_sortida.json) JA ESTA CREAT DONARA ERROR PER PANTALLA I NO ES MODIFICARA EL JA CREAT")
-print("SI VOLEM GENERAR UN NOU fitxer_sortida.json CAL BORRAR EL VELL")
 directori = r"C:\Users\Directori\OnTens\JSONs"
 
 # Obté una llista de tots els fitxers en el directori
