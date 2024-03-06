@@ -1,5 +1,7 @@
 import os
 import json
+# Importa la funció tqdm de la llibreria tqdm per generar la barra de progrés
+from tqdm import tqdm 
 
 directori = r"C:\Users\Directori\OnTens - els\JSON"
 # Agafem els fitxers JSON dins el directori, excepte si es diu "fitxer_sortida.json" que és on guardarem les dades 
@@ -22,8 +24,8 @@ for fitxer_json in fitxers_json:
 
         # Accedeix a una clau [] concreta (en aquest cas "results") per poder agafar les dades anidades {} de dins de la clau
         results = data.get("results", [])
-
-        for result in results:
+        # Substituim on aniria results per tqdm i després dins el parèntesi posem "results" i el missatge que mostrem per pantalla
+        for result in tqdm(results, desc="Generant fitxer JSON"):
             dades_extretes = {
                 "uidentifier": result.get("uidentifier"),
                 "name": result.get("name"),
